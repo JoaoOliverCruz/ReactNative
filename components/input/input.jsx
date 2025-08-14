@@ -2,7 +2,7 @@ import { View, Text, TextInput, StyleSheet } from "react-native"
 
 
 
-export const Input = () => {
+export const Input = ({valorCep, onchangeValorCep}) => {
     return(
         <View style={styles.campoInput}>
             <Text style={styles.label}>
@@ -12,6 +12,9 @@ export const Input = () => {
                 placeholder = "00000-000"
                 style={styles.input}
                 maxLength={8}
+
+                value={valorCep}
+                onChangeText={onchangeValorCep}
                     
             ></TextInput>        
         </View>
@@ -27,7 +30,11 @@ const styles = StyleSheet.create({
         borderBottomColor: '#939393',
         color: '#939393',
         padding: 5,
-        outlineStyle: 'none'
+        outlineStyle: 'none',
+        fontFamily: 'Poppins-Bold'
+    },
+    label:{
+        fontFamily: 'Poppins-Bold'
     }
 
 })

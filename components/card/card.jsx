@@ -1,25 +1,27 @@
 import { Text, StyleSheet, View } from "react-native";
+import { useState } from "react";
 
 
-
-export const Card = () => {
+export const Card = ({cep, logradouro, bairro, uf, estado, regiao}) => {
+  
     return (
         <>
-            <View style={styles.card} showsVerticalScrollIndicator={true}>
+            
+            <View style={styles.card} showsVerticalScrollIndicator={true} >
                 <View>
                     <Text style={styles.tituloValor}>
                         CEP:
                     </Text>
                     <Text style={styles.valor}>
-                        Dado 01
+                        {cep}
                     </Text>
                 </View>
                 <View>
                     <Text style={styles.tituloValor}>
-                        Longradouro:
+                        Logradouro:
                     </Text>
                     <Text style={styles.valor}>
-                        Dado 02
+                        {logradouro}
                     </Text>
                 </View>
                 <View>
@@ -27,7 +29,7 @@ export const Card = () => {
                         Bairro:
                     </Text>
                     <Text style={styles.valor} >
-                        Dado 03
+                        {bairro}
                     </Text>
                 </View>
                 <View>
@@ -35,7 +37,7 @@ export const Card = () => {
                         UF:
                     </Text>
                     <Text style={styles.valor} >
-                        Dado 04
+                        {uf}
                     </Text>
                 </View>
                 <View>
@@ -43,7 +45,7 @@ export const Card = () => {
                         Estado:
                     </Text>
                     <Text  style={styles.valor}>
-                        Dado 05
+                        {estado}
                     </Text>
                 </View>
                 <View>
@@ -51,17 +53,18 @@ export const Card = () => {
                         Região:
                     </Text>
                     <Text style={styles.valor}>
-                        Dado 06
+                        {regiao}
                     </Text>
                 </View>
-            </View>
+
+        </View>
         </>
     )
 }
 
 const styles = StyleSheet.create({
     card: {
-        minHeight: '40%',
+        minHeight: '30%',
         width: '70%',
         padding: 20,
         //   backgroundColor: 'white',
@@ -73,12 +76,18 @@ const styles = StyleSheet.create({
         //   backgroundColor: 'blue'
         borderRadius: 7,
         boxShadow: 'rgba(0,0,0, 0.15) 1.95px 1.95px 2.6px 2.00px',
-        marginBottom: 120,
+        marginBottom: 300,
         gap: 20
 
     },
     tituloValor: {
-        fontWeight: 600
+        fontFamily: 'Poppins-Bold',
+        fontWeight: 600,
+
+    },
+    valor: {
+        fontFamily: 'Poppins-Bold'
     }
+    
 
 })
