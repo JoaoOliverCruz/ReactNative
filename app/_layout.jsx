@@ -17,7 +17,7 @@ export default function RootLayout() {
       </View>
     )
   }
-  // return <Stack />;
+
   return(
   <Stack>
     <Stack.Screen name="index" options={{title: '', headerTransparent: true, headerShown: false}}/>
